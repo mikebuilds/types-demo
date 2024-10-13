@@ -1,0 +1,112 @@
+{
+	"NextJS Root Layout": {
+		"prefix": "nlayoutroot",
+		"body": [
+			"const RootLayout: NextLayout = (props) => {",
+			"\treturn (",
+			"\t\t<html lang=\"en\">",
+			"\t\t\t<body className=\"antialiased\">{props.children}</body>",
+			"\t\t</html>",
+			"\t);",
+			"}",
+			"",
+			"export default RootLayout"
+		],
+		"description": "NextJS Root Layout"
+	},
+	"NextJS Layout": {
+		"prefix": "nlayout",
+		"body": [
+			"const ${1:${TM_DIRECTORY/.*\\/(.*)$/${1:/capitalize}/g}}Layout: NextLayout${2:<>} = (props) => {",
+			"\treturn (",
+			"\t\t<${3:div}>",
+			"\t\t\t${4:{props.children\\}}",
+			"\t\t</${3:div}>",
+			"\t);",
+			"}",
+			"",
+			"export default ${1}Layout"
+		],
+		"description": "NextJS Layout"
+	},
+	"NextJS Page": {
+		"prefix": "npage",
+		"body": [
+			"const ${1:${TM_DIRECTORY/.*\\/(.*)$/${1:/capitalize}/g}}Page: NextPage${2:<>} = (props) => {",
+			"\treturn (",
+			"\t\t<${3:div}>",
+			"\t\t\t${4}",
+			"\t\t</${3:div}>",
+			"\t);",
+			"}",
+			"",
+			"export default ${1}Page"
+		],
+		"description": "NextJS Page"
+	},
+	"NextJS Loading": {
+		"prefix": "nloading",
+		"body": [
+			"const ${1:${TM_DIRECTORY/.*\\/(.*)$/${1:/capitalize}/g}}Loading = () => {",
+			"\treturn (",
+			"\t\t<${2:div}>",
+			"\t\t\t${3}",
+			"\t\t</${2:div}>",
+			"\t);",
+			"}",
+			"",
+			"export default ${1}Loading"
+		],
+		"description": "NextJS Loading"
+	},
+	"NextJS Route Handler": {
+		"prefix": "nroute",
+		"body": [
+			"export const ${1:GET}: NextRoute${2:<>} = (request, context) => {",
+			"\treturn ${3:Response.json({\\})}",
+			"}"
+		],
+		"description": "NextJS Route Handler"
+	},
+	"NextJS Params Type": {
+		"prefix": "nparams",
+		"body": [
+			"export type ${1:${TM_DIRECTORY/.*\\/(.*)$/${1:/capitalize}/g}Layout}Params = {${2}}"
+		],
+		"description": "NextJS Params Type"
+	},
+	"NextJS Action": {
+		"prefix": "naction",
+		"body": [
+			"\"use server\"",
+			"",
+			"export const ${1:${TM_FILENAME_BASE}Action} = async (state:${2:{\\}}, ${3:form:FormData}) => {",
+			"\t${4}",
+			"}"
+		],
+		"description": "NextJS Action"
+	},
+	"Exported Arrow Function": {
+		"prefix": "af",
+		"body": [
+			"export const ${1:name} = (${2:props}) => {",
+			"\t${3}",
+			"}"
+		],
+		"description": "Exported Arrow Function"
+	},
+	"Use Client": {
+		"prefix": "uc",
+		"body": [
+			"use client"
+		],
+		"description": "Use Client"
+	},
+	"Use Server": {
+		"prefix": "us",
+		"body": [
+			"use server"
+		],
+		"description": "Use Server"
+	}
+}

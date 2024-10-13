@@ -1,0 +1,20 @@
+{
+    "autoSnippet.snippets": [
+        {
+            "pattern": "**/page.tsx",
+            "snippet": "NextJS Page"
+        },
+        {
+            "pattern": "**/loading.tsx",
+            "snippet": "NextJS Loading"
+        },
+        {
+            "pattern": "**/layout.tsx",
+            "snippet": "NextJS Layout"
+        },
+        {
+            "pattern": "**/route.ts",
+            "snippet": "NextJS Route Handler"
+        }
+    ],
+}
